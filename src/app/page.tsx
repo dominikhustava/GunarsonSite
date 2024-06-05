@@ -15,7 +15,7 @@ const Home: React.FC = () => {
           <ImageSlideshow />
           <div className="text-center md:mx-6 lg:mx-16 mb-10 md:mb-22">
             <h1 id="onas" className="text-4xl font-semibold mb-2 mt-16 lg:pt-8">O nás</h1>
-            <p className="text-lg md:text-xl">Naša firma sa venuje rôznym stavebným prácam, aktuálne najmä obnove a zatepleniu fasád bytových domov. V našom tíme je kombinácia mladých energických ľudí so staršími celoživotne skúsenými stavbármi. Našim heslom je: <span>"Rýchlo a kvalitne!"</span> V spolupráci s väčšími firmami máme skúsenosť s najmodernejšími postupmi kontaktného zatepľovania pre tie najvýššie štandardy na tepelnú izoláciu budov. Okrem iného máme dostatočne skúsenosti aj s inými murárskymi a stavebnými prácami. Pre viac info neváhajte použiť sekciu kontakt.</p>
+            <p className="text-lg md:text-xl">Naša firma sa venuje rôznym stavebným prácam, aktuálne najmä obnove a zatepleniu fasád bytových domov. V našom tíme je kombinácia mladých energických ľudí so staršími celoživotne skúsenými stavbármi. Našim heslom je: <span className="font-bold">Rýchlo a kvalitne!</span> V spolupráci s väčšími firmami máme skúsenosť s najmodernejšími postupmi kontaktného zatepľovania pre tie najvýššie štandardy na tepelnú izoláciu budov. Okrem iného máme dostatočne skúsenosti aj s inými murárskymi a stavebnými prácami. Pre viac info neváhajte použiť sekciu kontakt.</p>
 
             <div className="flex flex-row justify-center md:justify-around mt-4 md:mt-10 gap-x-1">
                 <div className="flex w-32 h-32 md:w-80 md:h-80 bg-gray-600 rounded-2xl "></div>
