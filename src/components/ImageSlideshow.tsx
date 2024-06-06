@@ -25,8 +25,31 @@ const ImageSlideshow: React.FC = () => {
     setCurrentSlide((prevSlide) => (prevSlide === 0 ? slides.length - 1 : prevSlide - 1));
   };
 
+  const [startX, setStartX] = useState(0);
+  const [endX, setEndX] = useState(0);
+
+  const handleTouchStart = (e) => {
+    setStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setEndX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    const deltaX = endX - startX;
+    const threshold = 50; // Minimum swipe distance required to trigger slide change
+
+    if (deltaX > threshold) {
+      goToPrevSlide();
+    } else if (deltaX < -threshold) {
+      goToNextSlide();
+    }
+  };
+
+
   return (
-    <div className="relative h-[50vh] sm:h-[65vh] lg:h-[70vh] md:mx-6 lg:mx-16 mb-8">
+    <div className="relative h-[50vh] sm:h-[65vh] lg:h-[70vh] md:mx-6 lg:mx-16 mb-8" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
       {slides.map((slide, index) => (
         <div
           key={slide.id}
