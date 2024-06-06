@@ -38,7 +38,7 @@ const ImageSlideshow: React.FC = () => {
 
   const handleTouchEnd = () => {
     const deltaX = endX - startX;
-    const threshold = 50; // Minimum swipe distance required to trigger slide change
+    const threshold = 30; // Minimum swipe distance required to trigger slide change
 
     if (deltaX > threshold) {
       goToPrevSlide();
