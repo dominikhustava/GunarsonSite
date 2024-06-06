@@ -28,11 +28,11 @@ const ImageSlideshow: React.FC = () => {
   const [startX, setStartX] = useState(0);
   const [endX, setEndX] = useState(0);
 
-  const handleTouchStart = (e) => {
+  const handleTouchStart = (e: React.TouchEvent) => {
     setStartX(e.touches[0].clientX);
   };
 
-  const handleTouchMove = (e) => {
+  const handleTouchMove = (e: React.TouchEvent) => {
     setEndX(e.touches[0].clientX);
   };
 
