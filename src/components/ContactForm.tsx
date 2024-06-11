@@ -1,7 +1,8 @@
 "use client"
+import { sendEmail } from '@/utils/sendEmail';
 import React, { useState } from 'react';
 
-type FormData = {
+export type FormData = {
   name: string;
   email: string;
   message: string;
@@ -22,8 +23,9 @@ const ContactForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle form submission (e.g., send form data to an API)
-    setSubmitted(true);
+    sendEmail(formData);
     console.log(formData);
+    setSubmitted(true);
   };
 
   return (
